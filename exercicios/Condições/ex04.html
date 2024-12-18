@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de Condicionais</title>
+</head>
+<body>
+    <h1>Exercicio cópia do EX03.js</h1>
+
+    <input type="text" id="texto">
+    <input type="button" value="Analisar país" onclick="nacionalidade()">
+    <div id="res"></div>
+
+    <script>
+        function nacionalidade() {
+            let txt = document.getElementById('texto')
+            let div = document.getElementById('res')
+            let txtres = String(txt.value)
+
+            if (txtres == 'Brasil') {
+                div.innerHTML = `Você é do ${txtres}, então é brasileiro`
+            }else {
+                div.innerHTML = `Você é do ${txtres}, então é estrangeiro`
+            }
+            
+        }
+    </script>
+</body>
+</html>

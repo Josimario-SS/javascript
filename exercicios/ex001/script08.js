@@ -21,4 +21,4 @@ alert(pessoa.profissao)
 
 for (const i in pessoa) {
     pessoa[i] = prompt("Digite o valor para o objeto: ")
-}
+} 
