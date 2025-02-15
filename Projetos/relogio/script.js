@@ -1,0 +1,13 @@
+setInterval(() => {
+    function formatTime(time) {
+        return time < 10 ? "0" + time : time;
+    }
+
+    let data = new Date();
+    let hora = data.getHours();
+    let minuto = data.getMinutes();
+    let segundo = data.getSeconds();
+}, 1000);
+document.getElementById('hora') = formatTime(hora);
+
+
