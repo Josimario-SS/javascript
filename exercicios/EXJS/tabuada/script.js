@@ -1,44 +1,24 @@
-function verificar() {
-    let data = new Date();
-    let anoAtual = data.getFullYear();
-    let fano = document.getElementById('txtano');
-    let res = document.querySelector('div#res');
-    if (fano.value.length == 0 || Number(fano.value) > anoAtual) {
-        window.alert('[ERRO] Verifique os dados e tente novamente!');
-    }
+function gerarTabuada() {
 
-    else {
-        let fsex = document.getElementsByName('radsex');
-        let idade = anoAtual - Number(fano.value);
-        let genero = '';
-        let img = document.createElement('img');
-        img.setAttribute('id', 'foto');
+    // Obtém o valor do número digitado pelo usuário
+    // e o elemento onde o resultado será exibido
+    const numero = document.getElementById("txtnumero").value;
+    const resultado = document.getElementById("resultado");
+    
 
-        if (fsex[0].checked) {
-            genero = 'Homem';
-            if (idade >= 0 && idade < 10) {
-                img.setAttribute('src', 'img/img-garoto.png');
-            } else if (idade < 25) {
-                img.setAttribute('src', 'img/img_homem-jovem.png');
-            } else if (idade < 50) {
-                img.setAttribute('src', 'img/img_homem-midade.png');
-            } else {
-                img.setAttribute('src', 'img/img_homem-idoso.png');
-            }
-        } else if (fsex[1].checked) {
-            genero = 'Mulher';
-            if (idade >= 0 && idade < 10) {
-                img.setAttribute('src', 'img/img-garota.png');
-            } else if (idade < 25) {
-                img.setAttribute('src', 'img/mulher_jovem.png');
-            } else if (idade < 50) {
-                img.setAttribute('src', 'img/mulher_midade.png');
-            } else {
-                img.setAttribute('src', 'img/img_mulher-idosa.png');
-            }
-        }
-        
-        res.innerHTML = `Detectamos um(a) ${genero} com ${idade} anos.`;
-        res.appendChild(img);
+    let i = 0; // Inicializa o contador i com 1
+
+    if (numero === "") {
+        // Se o campo estiver vazio, exibe uma mensagem de erro
+        resultado.innerHTML = "<p>Por favor, digite um número.</p>";
+        return; // Interrompe a execução da função
     }
+    resultado.innerHTML = ""; // Limpa o conteúdo anterior do resultado
+    while (i < 11) {
+        let produto = numero * i; // Calcula o produto
+        // Exibe o resultado
+        resultado.innerHTML += `<p>${numero} x ${i} = ${produto}</p>`;
+        i++; // Incrementa o contador i
+    }
+    
 }
