@@ -19,30 +19,39 @@ function Contar(){
     }
 
     // Verifica se o passo é maior que zero
-    if (Number(passo.value) <= 0) {
+    else if (Number(passo.value) <= 0) {
         alert('ERROR! O passo deve ser maior que zero!');
         contador.innerHTML = "Impossível contar!";
         return;
     }
 
-    // Verifica se o início é maior que o fim
-    if (Number(inicio.value) > Number(fim.value)) {
-        alert('ERROR! O início não pode ser maior que o fim!');
-        contador.innerHTML = "Impossível contar!";
-        return;
-    }
-
+    
     // Se tudo estiver correto, faz a contagem
     contador.innerHTML = '';
     let ini = Number(inicio.value);
     let f = Number(fim.value);
     let p = Number(passo.value);
-
-    for (let c = ini; c <= f; c += p) {
-        contador.innerHTML += `${c} \u{1F449} `;
-    }
-    contador.innerHTML += `\u{1F3C1}`; // Adiciona o emoji de bandeira de chegada
     
+
+    contador.innerHTML = `Contando...`;
+    // Verifica se o início é menor que o fim
+    if (Number(inicio.value) < Number(fim.value)) {
+
+        for (let c = ini; c <= f; c += p) {
+            contador.innerHTML += `${c} \u{1F449} `;
+        }
+        contador.innerHTML += `\u{1F3C1}`; // Adiciona o emoji de bandeira de chegada
+    }
+    
+    // Verifica se o início é maior que o fim
+    else if (Number(inicio.value) > Number(fim.value)) {
+        
+        for (let c = ini; c >= f; c -= p) {
+            contador.innerHTML += `${c} \u{1F449} `;
+        }
+        contador.innerHTML += `\u{1F3C1}`; // Adiciona o emoji de bandeira de chegada
+        return;
+    }
 
     
 }
