@@ -31,7 +31,7 @@ const numeros = [10, 20, 30, 40, 50];
 function MaiorNumero(array) {
     return Math.max.apply(null, array);
 }
-// ESSA FUNÇÃO VAI MOSTRAR O mENOR NUMERO
+// ESSA FUNÇÃO VAI MOSTRAR O MENOR NUMERO
 function MenorNumero(array) {
     return Math.min.apply(null, array);
 }
