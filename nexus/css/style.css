@@ -279,3 +279,16 @@ footer {
     padding: 20px;
     font-size: 0.9rem;
 }
+
+/*PARA DISPOSITIVOS MOVEIS PEQUENOS
+*/
+@media (max-width: 320px) {
+    .hero {
+        padding: 60px 0px;
+    }
+
+    section.hero > h1 {
+        font-size: 2.5em;
+    }
+}
+
