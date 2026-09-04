@@ -57,7 +57,7 @@ nav a:hover {
 }
 
 .hero {
-    background: url('/nexus/img/banner.jpg') no-repeat center top fixed;
+    background: url('../img/banner.jpg') no-repeat center top fixed;
     height: 500px;
     opacity: 0.9;
     color: rgb(0, 0, 0);
