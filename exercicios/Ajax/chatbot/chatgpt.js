@@ -1,4 +1,4 @@
-const CHATGPT_KEY = "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";
+const CHATGPT_KEY = "";
 
 const consultarChat = async () => {
     let question = document.getElementById("quest").value;
