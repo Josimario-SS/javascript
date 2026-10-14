@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo API</title>
+    <style>
+        #formQuest {
+            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input {
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="formQuest">
+        <h1>Pergunte ao ChatGPT</h1>
+        <input type="text" name="" id="quest"><br><br>
+        <button type="button" onclick="consultarChat()">Perguntar</button><br><br>
+        <div id="pergunta"></div><br><br>
+        <div id="resposta"></div>
+    </form>
+
+    <script src="./chatgpt.js"></script>
+</body>
+</html>
