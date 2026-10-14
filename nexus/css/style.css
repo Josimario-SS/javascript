@@ -1,5 +1,5 @@
 :root {
-    --primary: #FF6600;
+    --primary: #ff6600;
     --dark: #121212;
     --gray-dark: #1E1E1E;
     --gray-light: #F4F4F9;
@@ -279,3 +279,16 @@ footer {
     padding: 20px;
     font-size: 0.9rem;
 }
+
+/*PARA DISPOSITIVOS MOVEIS PEQUENOS
+*/
+@media (max-width: 320px) {
+    .hero {
+        padding: 60px 0px;
+    }
+
+    section.hero > h1 {
+        font-size: 2.5em;
+    }
+}
+
