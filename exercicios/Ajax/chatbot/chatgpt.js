@@ -1,4 +1,4 @@
-const CHATGPT_KEY = "";
+const /*CHATGPT_KEY = "";
 
 const consultarChat = async () => {
     let question = document.getElementById("quest").value;
