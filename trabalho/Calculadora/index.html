@@ -11,16 +11,23 @@
         <h1>Tabuada</h1>
     </header>
 
-    <main>
+    <main class="card">
         <div class="container">
             <h2>Calculadora de Multiplicação</h2>
+
             <form id="tabuadaForm">
+
                 <label for="numero">Digite um número entre 0 e 10:</label>
                 <input type="number" id="numero" name="numero" required> <br>
-                <button type="button" onclick="Multiplicar()">Gerar Tabuada</button>
-                <button type="button" onclick="Limpar()">Limpar</button>
+
+                <div class="button-group">
+                    <button id="gerar" type="button" onclick="Multiplicar()">Gerar Tabuada</button>
+
+                    <button id="limpar" type="button" onclick="Limpar()">Limpar</button>
+                </div>
             </form>
-            <div class="resultado">
+
+            <div id="res" class="resultado">
                 <p id="resultado"></p>
             </div>
         </div>

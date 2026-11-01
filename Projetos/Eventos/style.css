@@ -1,0 +1,11 @@
+
+h1 {
+    text-align: center;
+}
+label {
+    background-color: cadetblue;
+    color: rgb(191, 234, 215);
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
