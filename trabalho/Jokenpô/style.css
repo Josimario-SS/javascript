@@ -1,3 +1,4 @@
+/* import de font "Bungee" da API do Google */
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 * {
@@ -20,7 +21,6 @@ body {
 .container {
     text-align: center;
 }
-
 /* Alinha as opções horizontalmente com espaçamento */
 .opcoes {
     font-family: "Bungee", sans-serif;
@@ -36,7 +36,6 @@ body {
     color: #3d99fc;
 
 }
-
 /* Estiliza cada item/div como um botão */
 .opcao {
     color: #3d40fc;
@@ -49,7 +48,6 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
-
 /* Efeito ao passar o mouse */
 .opcao:hover {
     background-color: #2f66ff9c;
@@ -57,8 +55,8 @@ body {
     border-color: #ffffff;
     transform: translateY(-2px);
 }
-
-.imgs {
+/* Configuração da div onde as imagens se encontram */
+.div-imgs {
     display: flex;
     justify-content: space-between;
     align-content: space-between;
@@ -66,14 +64,14 @@ body {
     flex-wrap: wrap;
     align-items: center;
 }
-
+/* Estilização dos parágrafos */
 div > p {
     color: #ffffff;
     font-size: 1.5em;
     font-weight: bold;
     margin: 0 0 5px 0;
 }
-
+/* Estilização das imagens */
 .img_user {
     padding-right: 25px;
     display: none;
@@ -85,7 +83,21 @@ div > p {
     padding-left: 25px;
     display: none;
 }
-
+/* Estilização da mensagem de resultado da partida */
+#resultado_win {
+    color: rgb(54, 199, 54);
+    text-shadow: rgba(90, 216, 90, 0.664) 0px 0px 5px;
+}
+#resultado_empate {
+    color: rgba(255, 223, 80, 0.979);
+    text-shadow: rgba(223, 212, 162, 0.904) 0 0 5px;
+    
+}
+#resultado_loser {
+    color: rgb(255, 104, 66);
+    text-shadow: rgba(233, 121, 93, 0.966) 0 0 5px;
+}
+/* Estilização do botão */
 div > button {
     font-family: "Bungee", sans-serif;
     font-weight: 400;
@@ -101,29 +113,14 @@ div > button {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
-
-#resultado_win {
-    color: rgb(54, 199, 54);
-    text-shadow: rgba(90, 216, 90, 0.664) 0px 0px 5px;
-}
-#resultado_empate {
-    color: rgba(255, 223, 80, 0.979);
-    text-shadow: rgba(223, 212, 162, 0.904) 0 0 5px;
-    
-}
-#resultado_loser {
-    color: rgb(255, 104, 66);
-    text-shadow: rgba(233, 121, 93, 0.966) 0 0 5px;
-}
-
 div > button:hover {
     background-color: #2f66ff9c;
     color: rgb(236, 236, 236);
     border-color: #ffffff;
     transform: translateY(-2px);
 }
-
 #jogar_nova {
     display: none;
     margin: auto;
+    margin-top: 20px;
 }
